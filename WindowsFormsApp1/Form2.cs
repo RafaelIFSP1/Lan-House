@@ -34,6 +34,14 @@ namespace WindowsFormsApp1
             product.ShowDialog();
             this.Visible = true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form4 product = new Form4();
+            this.Visible = false;
+            product.ShowDialog();
+            this.Visible = true;
+        }
     }
    
 }
