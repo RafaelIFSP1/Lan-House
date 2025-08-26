@@ -32,7 +32,15 @@ namespace LanHouseSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-         
+
+            if (string.IsNullOrEmpty(txbNome.Text) ||
+        string.IsNullOrEmpty(txbEmail.Text) ||
+        string.IsNullOrEmpty(txbSenha.Text))
+            {
+                MessageBox.Show("Preencha todos os campos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             try
             {
                 string conexao = @"Server=SQLEXPRESS;Database=CJ3027287PR2;User Id=aluno;Password=aluno;";
