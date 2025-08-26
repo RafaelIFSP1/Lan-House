@@ -32,7 +32,34 @@ namespace LanHouseSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string email = txbEmail.Text;
+         
+            try
+            {
+                string conexao = @"Server=SQLEXPRESS;Database=CJ3027287PR2;User Id=aluno;Password=aluno;";
+
+                using (System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection(conexao))
+                {
+                    conn.Open();
+
+                    string comando = "INSERT INTO usuarios (nome, email, senha) VALUES (@1, @2, @3)";
+
+                    System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(comando, conn);
+                    cmd.Parameters.AddWithValue("@1", txbNome.Text);
+                    cmd.Parameters.AddWithValue("@2", txbEmail.Text);
+                    cmd.Parameters.AddWithValue("@3", txbSenha.Text);
+
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Salvo com sucesso!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+        
+
+
+        string email = txbEmail.Text;
             string nome = txbNome.Text;
             string senha = txbSenha.Text;
             MessageBox.Show("Nome: " + nome + "\nSenha: " + senha + "\nEmail: " + email);

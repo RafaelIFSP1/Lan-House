@@ -1,6 +1,6 @@
 ﻿namespace LanHouseSystem
 {
-    partial class FormCronometroPC3
+    partial class PC3
     {
         /// <summary>
         /// Required designer variable.

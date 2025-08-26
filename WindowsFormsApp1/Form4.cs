@@ -20,7 +20,7 @@ namespace LanHouseSystem
 
         private void btnPC1_Click(object sender, EventArgs e)
         {
-            FormCronometroPC1 product = new FormCronometroPC1();
+            PC1 product = new PC1();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
@@ -30,7 +30,7 @@ namespace LanHouseSystem
 
         private void btnPC2_Click(object sender, EventArgs e)
         {
-            FormCronometroPC2 product = new FormCronometroPC2();
+            PC2 product = new PC2();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;
@@ -38,7 +38,7 @@ namespace LanHouseSystem
 
         private void btnPC3_Click(object sender, EventArgs e)
         {
-            FormCronometroPC3 product = new FormCronometroPC3();
+            PC3 product = new PC3();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;

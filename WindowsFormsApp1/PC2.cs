@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LanHouseSystem
 {
-    public partial class FormCronometroPC2 : Form
+    public partial class PC2 : Form
     {
-        public FormCronometroPC2()
+        public PC2()
         {
             InitializeComponent();
         }

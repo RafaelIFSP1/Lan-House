@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.9.0\lib\net462\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,23 +73,23 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCronometroPC1.cs">
+    <Compile Include="PC1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCronometroPC1.Designer.cs">
-      <DependentUpon>FormCronometroPC1.cs</DependentUpon>
+    <Compile Include="PC1.Designer.cs">
+      <DependentUpon>PC1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCronometroPC2.cs">
+    <Compile Include="PC2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCronometroPC2.Designer.cs">
-      <DependentUpon>FormCronometroPC2.cs</DependentUpon>
+    <Compile Include="PC2.Designer.cs">
+      <DependentUpon>PC2.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCronometroPC3.cs">
+    <Compile Include="PC3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCronometroPC3.Designer.cs">
-      <DependentUpon>FormCronometroPC3.cs</DependentUpon>
+    <Compile Include="PC3.Designer.cs">
+      <DependentUpon>PC3.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,8 +111,8 @@
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCronometroPC1.resx">
-      <DependentUpon>FormCronometroPC1.cs</DependentUpon>
+    <EmbeddedResource Include="PC1.resx">
+      <DependentUpon>PC1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -121,6 +124,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
