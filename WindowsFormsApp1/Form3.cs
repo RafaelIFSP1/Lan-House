@@ -41,6 +41,20 @@ namespace LanHouseSystem
                 {
                     conn.Open();
 
+                    // VERIFICA SE EMAIL JÁ EXISTE
+                    string verificarEmail = "SELECT COUNT(*) FROM usuarios WHERE email = @Email";
+                    using (System.Data.SqlClient.SqlCommand cmdVerificar = new System.Data.SqlClient.SqlCommand(verificarEmail, conn))
+                    {
+                        cmdVerificar.Parameters.AddWithValue("@Email", txbEmail.Text);
+                        int existe = (int)cmdVerificar.ExecuteScalar();
+
+                        if (existe > 0)
+                        {
+                            MessageBox.Show("Email já cadastrado! Use outro email.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return; // PARA AQUI SE JÁ EXISTIR
+                        }
+                    }
+
                     string comando = "INSERT INTO usuarios (nome, email, senha) VALUES (@1, @2, @3)";
 
                     System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(comando, conn);
