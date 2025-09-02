@@ -127,5 +127,10 @@ namespace LanHouseSystem
             product.ShowDialog();
             this.Visible = true;
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

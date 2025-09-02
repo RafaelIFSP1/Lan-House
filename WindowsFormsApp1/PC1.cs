@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SeuNamespace;
 using WindowsFormsApp1;
 
 
@@ -21,10 +22,6 @@ namespace LanHouseSystem
         {
             InitializeComponent();
         }
-
-
-
-
 
 
         private void FormCronometroPC1_Load(object sender, EventArgs e)
@@ -76,7 +73,7 @@ namespace LanHouseSystem
 
                 MessageBox.Show(mensagem, "Encerramento - PC1", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-               
+
                 // Reseta variáveis
                 pcAtivo = false;
 
@@ -85,14 +82,14 @@ namespace LanHouseSystem
                 product.ShowDialog();
                 this.Visible = true;
 
+
             }
-            else
-            {
-                MessageBox.Show("PC1 não está em uso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
 
-
-                }
-            }
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SnakeGame snakeGame = new SnakeGame();
+            snakeGame.Show();
         }
     }
+}

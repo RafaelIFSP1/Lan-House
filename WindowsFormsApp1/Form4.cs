@@ -67,7 +67,7 @@ namespace LanHouseSystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Recordes product = new Recordes();
+            jogosMJ product = new jogosMJ();
             this.Visible = false;
             product.ShowDialog();
             this.Visible = true;

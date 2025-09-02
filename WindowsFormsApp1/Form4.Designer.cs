@@ -86,12 +86,12 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button1.Font = new System.Drawing.Font("Segoe Print", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Font = new System.Drawing.Font("Segoe Print", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(12, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 85);
             this.button1.TabIndex = 4;
-            this.button1.Text = "RECORDES";
+            this.button1.Text = "JOGOS MAIS JOGADOS";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -131,6 +131,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.BackgroundImage = global::LanHouseSystem.Properties.Resources.R__1_;
             this.ClientSize = new System.Drawing.Size(750, 394);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
