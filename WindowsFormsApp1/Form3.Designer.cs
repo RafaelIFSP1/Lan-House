@@ -44,6 +44,7 @@
             // exitbutton3
             // 
             this.exitbutton3.BackColor = System.Drawing.Color.Red;
+            this.exitbutton3.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitbutton3.Location = new System.Drawing.Point(633, 12);
             this.exitbutton3.Name = "exitbutton3";
             this.exitbutton3.Size = new System.Drawing.Size(120, 35);
@@ -55,6 +56,7 @@
             // btnAcessar
             // 
             this.btnAcessar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAcessar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcessar.Location = new System.Drawing.Point(23, 363);
             this.btnAcessar.Name = "btnAcessar";
             this.btnAcessar.Size = new System.Drawing.Size(94, 37);
@@ -82,18 +84,20 @@
             // labelEmail
             // 
             this.labelEmail.AutoSize = true;
-            this.labelEmail.Location = new System.Drawing.Point(20, 196);
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.Location = new System.Drawing.Point(20, 193);
             this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(39, 13);
+            this.labelEmail.Size = new System.Drawing.Size(51, 16);
             this.labelEmail.TabIndex = 4;
             this.labelEmail.Text = "EMAIL";
             // 
             // labelSenha
             // 
             this.labelSenha.AutoSize = true;
-            this.labelSenha.Location = new System.Drawing.Point(20, 284);
+            this.labelSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelSenha.Location = new System.Drawing.Point(20, 281);
             this.labelSenha.Name = "labelSenha";
-            this.labelSenha.Size = new System.Drawing.Size(44, 13);
+            this.labelSenha.Size = new System.Drawing.Size(59, 16);
             this.labelSenha.TabIndex = 5;
             this.labelSenha.Text = "SENHA";
             // 
@@ -108,18 +112,20 @@
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(20, 113);
+            this.labelNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNome.Location = new System.Drawing.Point(20, 110);
             this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(39, 13);
+            this.labelNome.Size = new System.Drawing.Size(51, 16);
             this.labelNome.TabIndex = 7;
             this.labelNome.Text = "NOME";
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(678, 490);
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(633, 478);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(120, 35);
             this.button3.TabIndex = 9;
             this.button3.Text = "VOLTAR";
             this.button3.UseVisualStyleBackColor = false;

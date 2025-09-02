@@ -25,7 +25,7 @@ namespace LanHouseSystem
             product.ShowDialog();
             this.Visible = true;
 
-            
+
         }
 
         private void btnPC2_Click(object sender, EventArgs e)
@@ -46,11 +46,23 @@ namespace LanHouseSystem
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("VOCE SAIU DO APP",
+            // MOSTRA MENSAGEM DE CONFIRMAÇÃO
+            DialogResult resultado = MessageBox.Show(
+                "Tem certeza que quer sair do app?",
+                "Confirmação de Saída",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            // SE CLICOU EM "SIM", SAI DO APLICATIVO
+            if (resultado == DialogResult.Yes)
+            {
+                MessageBox.Show("VOCE SAIU DO APP",
                 "AVISO!",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation);
-            Environment.Exit(0);
+                Environment.Exit(0);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -60,5 +72,14 @@ namespace LanHouseSystem
             product.ShowDialog();
             this.Visible = true;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 product = new Form2();
+            this.Visible = false;
+            product.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
+

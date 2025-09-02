@@ -16,5 +16,10 @@ namespace LanHouseSystem
         {
             InitializeComponent();
         }
+
+        private void PC3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

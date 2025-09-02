@@ -114,6 +114,12 @@
     <EmbeddedResource Include="PC1.resx">
       <DependentUpon>PC1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PC2.resx">
+      <DependentUpon>PC2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PC3.resx">
+      <DependentUpon>PC3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

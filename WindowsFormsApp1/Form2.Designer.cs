@@ -36,9 +36,10 @@
             // Btnexit2
             // 
             this.Btnexit2.BackColor = System.Drawing.Color.Red;
-            this.Btnexit2.Location = new System.Drawing.Point(668, 12);
+            this.Btnexit2.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btnexit2.Location = new System.Drawing.Point(662, 12);
             this.Btnexit2.Name = "Btnexit2";
-            this.Btnexit2.Size = new System.Drawing.Size(120, 36);
+            this.Btnexit2.Size = new System.Drawing.Size(120, 35);
             this.Btnexit2.TabIndex = 0;
             this.Btnexit2.Text = "SAIR";
             this.Btnexit2.UseVisualStyleBackColor = false;
@@ -47,9 +48,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(12, 403);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(662, 400);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 35);
+            this.button1.Size = new System.Drawing.Size(120, 35);
             this.button1.TabIndex = 1;
             this.button1.Text = "VOLTAR";
             this.button1.UseVisualStyleBackColor = false;
@@ -57,6 +59,7 @@
             // 
             // btntelapc
             // 
+            this.btntelapc.Font = new System.Drawing.Font("Segoe Script", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btntelapc.Location = new System.Drawing.Point(20, 166);
             this.btntelapc.Name = "btntelapc";
             this.btntelapc.Size = new System.Drawing.Size(89, 69);

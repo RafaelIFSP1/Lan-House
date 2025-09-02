@@ -44,9 +44,9 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Palatino Linotype", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(12, 414);
+            this.btnExit.Location = new System.Drawing.Point(12, 406);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(131, 35);
+            this.btnExit.Size = new System.Drawing.Size(120, 35);
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "SAIR";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -54,14 +54,16 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(328, 102);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(238, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 20);
+            this.label1.Size = new System.Drawing.Size(325, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "LAN HOUSE SYSTEM";
             // 
             // Btnsearch
             // 
+            this.Btnsearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Btnsearch.Location = new System.Drawing.Point(331, 238);
             this.Btnsearch.Name = "Btnsearch";
             this.Btnsearch.Size = new System.Drawing.Size(119, 31);
@@ -72,7 +74,7 @@
             // 
             // txbEmail1
             // 
-            this.txbEmail1.Location = new System.Drawing.Point(255, 174);
+            this.txbEmail1.Location = new System.Drawing.Point(260, 174);
             this.txbEmail1.Name = "txbEmail1";
             this.txbEmail1.Size = new System.Drawing.Size(100, 20);
             this.txbEmail1.TabIndex = 4;
@@ -81,18 +83,21 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(285, 158);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(278, 155);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
+            this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 5;
             this.label2.Text = "EMAIL";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(453, 158);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(453, 155);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
+            this.label3.Size = new System.Drawing.Size(59, 16);
             this.label3.TabIndex = 6;
             this.label3.Text = "SENHA";
             // 
@@ -107,9 +112,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Location = new System.Drawing.Point(697, 414);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(645, 406);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 34);
+            this.button1.Size = new System.Drawing.Size(120, 35);
             this.button1.TabIndex = 8;
             this.button1.Text = "PRIMEIRO LOGUIN";
             this.button1.UseVisualStyleBackColor = false;

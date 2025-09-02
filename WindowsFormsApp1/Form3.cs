@@ -23,11 +23,23 @@ namespace LanHouseSystem
 
         private void exitbutton3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("VOCE SAIU DO APP",
-               "AVISO!",
-               MessageBoxButtons.OK,
-               MessageBoxIcon.Exclamation);
-            Environment.Exit(0);
+            // MOSTRA MENSAGEM DE CONFIRMAÇÃO
+            DialogResult resultado = MessageBox.Show(
+                "Tem certeza que quer sair do app?",
+                "Confirmação de Saída",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            // SE CLICOU EM "SIM", SAI DO APLICATIVO
+            if (resultado == DialogResult.Yes)
+            {
+                MessageBox.Show("VOCE SAIU DO APP",
+                "AVISO!",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Exclamation);
+                Environment.Exit(0);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

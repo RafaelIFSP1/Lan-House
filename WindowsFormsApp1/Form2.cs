@@ -20,11 +20,23 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("VOCE SAIU DO APP",
+            // MOSTRA MENSAGEM DE CONFIRMAÇÃO
+            DialogResult resultado = MessageBox.Show(
+                "Tem certeza que quer sair do app?",
+                "Confirmação de Saída",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            // SE CLICOU EM "SIM", SAI DO APLICATIVO
+            if (resultado == DialogResult.Yes)
+            {
+                MessageBox.Show("VOCE SAIU DO APP",
                 "AVISO!",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Exclamation);
-            Environment.Exit(0);
+                Environment.Exit(0);
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
