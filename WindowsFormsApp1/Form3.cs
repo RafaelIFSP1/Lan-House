@@ -45,66 +45,47 @@ namespace LanHouseSystem
         private void button2_Click(object sender, EventArgs e)
         {
 
-            if (string.IsNullOrEmpty(txbNome.Text) ||
-        string.IsNullOrEmpty(txbEmail.Text) ||
-        string.IsNullOrEmpty(txbSenha.Text))
-            {
-                MessageBox.Show("Preencha todos os campos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            string NOME = txbNOME.Text;
+            string EMAIL = txbEMAIL.Text;
+            string SENHA = txbSENHA.Text;
 
-            try
-            {
-                string conexao = @"Server=SQLEXPRESS;Database=CJ3027287PR2;User Id=aluno;Password=aluno;";
+            string conexao = "Data Source=sqlexpress;Initial Catalog=CJ3027287PR2;User ID=aluno;Password=aluno;";
 
-                using (System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection(conexao))
+            using (SqlConnection conn = new SqlConnection(conexao))
+            {
+                conn.Open();
+
+                // Verifica se o email já existe
+                string verificaSql = "SELECT COUNT(*) FROM Usuarios WHERE EMAIL = @EMAIL";
+                using (SqlCommand verificaCmd = new SqlCommand(verificaSql, conn))
                 {
-                    conn.Open();
+                    verificaCmd.Parameters.AddWithValue("@EMAIL", EMAIL);
+                    int existe = (int)verificaCmd.ExecuteScalar();
 
-                    // VERIFICA SE EMAIL JÁ EXISTE
-                    string verificarEmail = "SELECT COUNT(*) FROM usuarios WHERE email = @Email";
-                    using (System.Data.SqlClient.SqlCommand cmdVerificar = new System.Data.SqlClient.SqlCommand(verificarEmail, conn))
+                    if (existe > 0)
                     {
-                        cmdVerificar.Parameters.AddWithValue("@Email", txbEmail.Text);
-                        int existe = (int)cmdVerificar.ExecuteScalar();
-
-                        if (existe > 0)
-                        {
-                            MessageBox.Show("Email já cadastrado! Use outro email.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return; // PARA AQUI SE JÁ EXISTIR
-                        }
+                        MessageBox.Show("Este email já está cadastrado.");
+                        return;
                     }
-
-                    string comando = "INSERT INTO usuarios (nome, email, senha) VALUES (@1, @2, @3)";
-
-                    System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand(comando, conn);
-                    cmd.Parameters.AddWithValue("@1", txbNome.Text);
-                    cmd.Parameters.AddWithValue("@2", txbEmail.Text);
-                    cmd.Parameters.AddWithValue("@3", txbSenha.Text);
-
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Salvo com sucesso!");
                 }
+
+                // Insere novo usuário
+                string sql = "INSERT INTO Usuarios (NOME, EMAIL, SENHA) VALUES (@NOME, @EMAIL, @SENHA)";
+                using (SqlCommand cmd = new SqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@NOME", NOME);
+                    cmd.Parameters.AddWithValue("@EMAIL", EMAIL);
+                    cmd.Parameters.AddWithValue("@SENHA", SENHA);
+                    cmd.ExecuteNonQuery();
+                }
+
+                MessageBox.Show("Cadastro realizado com sucesso!");
+                txbNOME.Clear();
+                txbEMAIL.Clear();
+                txbSENHA.Clear();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.Message);
-            }
-        
-
-
-        string email = txbEmail.Text;
-            string nome = txbNome.Text;
-            string senha = txbSenha.Text;
-            MessageBox.Show("Nome: " + nome + "\nSenha: " + senha + "\nEmail: " + email);
-
-
-            Form2 product = new Form2();
-            this.Visible = false;
-            product.ShowDialog();
-            this.Visible = true;
         }
-        
+
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
 

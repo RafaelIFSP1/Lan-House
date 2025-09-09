@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SeuNamespace;
 
 namespace LanHouseSystem
 {
@@ -79,6 +80,11 @@ namespace LanHouseSystem
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SnakeGame snakeGame = new SnakeGame();  
+            snakeGame.Show();
+        }
     }
 }
 

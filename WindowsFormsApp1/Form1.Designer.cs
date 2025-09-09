@@ -31,12 +31,12 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Btnsearch = new System.Windows.Forms.Button();
-            this.txbEmail1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txbSenha1 = new System.Windows.Forms.TextBox();
+            this.txbSENHA = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txbEMAIL = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,14 +72,6 @@
             this.Btnsearch.UseVisualStyleBackColor = true;
             this.Btnsearch.Click += new System.EventHandler(this.Btnsearch_Click);
             // 
-            // txbEmail1
-            // 
-            this.txbEmail1.Location = new System.Drawing.Point(260, 174);
-            this.txbEmail1.Name = "txbEmail1";
-            this.txbEmail1.Size = new System.Drawing.Size(100, 20);
-            this.txbEmail1.TabIndex = 4;
-            this.txbEmail1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -101,13 +93,13 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "SENHA";
             // 
-            // txbSenha1
+            // txbSENHA
             // 
-            this.txbSenha1.Location = new System.Drawing.Point(429, 174);
-            this.txbSenha1.Name = "txbSenha1";
-            this.txbSenha1.Size = new System.Drawing.Size(100, 20);
-            this.txbSenha1.TabIndex = 7;
-            this.txbSenha1.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txbSENHA.Location = new System.Drawing.Point(429, 174);
+            this.txbSENHA.Name = "txbSENHA";
+            this.txbSENHA.Size = new System.Drawing.Size(100, 20);
+            this.txbSENHA.TabIndex = 7;
+            this.txbSENHA.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // button1
             // 
@@ -129,17 +121,26 @@
             this.pictureBox1.Size = new System.Drawing.Size(1697, 1048);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // txbEMAIL
+            // 
+            this.txbEMAIL.Location = new System.Drawing.Point(261, 174);
+            this.txbEMAIL.Name = "txbEMAIL";
+            this.txbEMAIL.Size = new System.Drawing.Size(100, 20);
+            this.txbEMAIL.TabIndex = 10;
+            this.txbEMAIL.TextChanged += new System.EventHandler(this.txbEmail_TextChanged);
             // 
             // LanHouse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(777, 453);
+            this.Controls.Add(this.txbEMAIL);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.txbSenha1);
+            this.Controls.Add(this.txbSENHA);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txbEmail1);
             this.Controls.Add(this.Btnsearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
@@ -158,12 +159,12 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Btnsearch;
-        private System.Windows.Forms.TextBox txbEmail1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txbSenha1;
+        private System.Windows.Forms.TextBox txbSENHA;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txbEMAIL;
     }
 }
 

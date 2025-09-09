@@ -30,11 +30,11 @@
         {
             this.exitbutton3 = new System.Windows.Forms.Button();
             this.btnAcessar = new System.Windows.Forms.Button();
-            this.txbEmail = new System.Windows.Forms.TextBox();
-            this.txbSenha = new System.Windows.Forms.TextBox();
+            this.txbEMAIL = new System.Windows.Forms.TextBox();
+            this.txbSENHA = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelSenha = new System.Windows.Forms.Label();
-            this.txbNome = new System.Windows.Forms.TextBox();
+            this.txbNOME = new System.Windows.Forms.TextBox();
             this.labelNome = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -65,21 +65,21 @@
             this.btnAcessar.UseVisualStyleBackColor = false;
             this.btnAcessar.Click += new System.EventHandler(this.button2_Click);
             // 
-            // txbEmail
+            // txbEMAIL
             // 
-            this.txbEmail.Location = new System.Drawing.Point(23, 212);
-            this.txbEmail.Name = "txbEmail";
-            this.txbEmail.Size = new System.Drawing.Size(100, 20);
-            this.txbEmail.TabIndex = 2;
-            this.txbEmail.TextChanged += new System.EventHandler(this.textBoxemail_TextChanged);
+            this.txbEMAIL.Location = new System.Drawing.Point(23, 212);
+            this.txbEMAIL.Name = "txbEMAIL";
+            this.txbEMAIL.Size = new System.Drawing.Size(100, 20);
+            this.txbEMAIL.TabIndex = 2;
+            this.txbEMAIL.TextChanged += new System.EventHandler(this.textBoxemail_TextChanged);
             // 
-            // txbSenha
+            // txbSENHA
             // 
-            this.txbSenha.Location = new System.Drawing.Point(23, 300);
-            this.txbSenha.Name = "txbSenha";
-            this.txbSenha.Size = new System.Drawing.Size(100, 20);
-            this.txbSenha.TabIndex = 3;
-            this.txbSenha.TextChanged += new System.EventHandler(this.textBoxsenha_TextChanged);
+            this.txbSENHA.Location = new System.Drawing.Point(23, 300);
+            this.txbSENHA.Name = "txbSENHA";
+            this.txbSENHA.Size = new System.Drawing.Size(100, 20);
+            this.txbSENHA.TabIndex = 3;
+            this.txbSENHA.TextChanged += new System.EventHandler(this.textBoxsenha_TextChanged);
             // 
             // labelEmail
             // 
@@ -101,13 +101,13 @@
             this.labelSenha.TabIndex = 5;
             this.labelSenha.Text = "SENHA";
             // 
-            // txbNome
+            // txbNOME
             // 
-            this.txbNome.Location = new System.Drawing.Point(23, 129);
-            this.txbNome.Name = "txbNome";
-            this.txbNome.Size = new System.Drawing.Size(100, 20);
-            this.txbNome.TabIndex = 6;
-            this.txbNome.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.txbNOME.Location = new System.Drawing.Point(23, 129);
+            this.txbNOME.Name = "txbNOME";
+            this.txbNOME.Size = new System.Drawing.Size(100, 20);
+            this.txbNOME.TabIndex = 6;
+            this.txbNOME.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             // 
             // labelNome
             // 
@@ -146,11 +146,11 @@
             this.ClientSize = new System.Drawing.Size(765, 525);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.labelNome);
-            this.Controls.Add(this.txbNome);
+            this.Controls.Add(this.txbNOME);
             this.Controls.Add(this.labelSenha);
             this.Controls.Add(this.labelEmail);
-            this.Controls.Add(this.txbSenha);
-            this.Controls.Add(this.txbEmail);
+            this.Controls.Add(this.txbSENHA);
+            this.Controls.Add(this.txbEMAIL);
             this.Controls.Add(this.btnAcessar);
             this.Controls.Add(this.exitbutton3);
             this.Controls.Add(this.pictureBox1);
@@ -177,11 +177,11 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button exitbutton3;
         private System.Windows.Forms.Button btnAcessar;
-        private System.Windows.Forms.TextBox txbEmail;
-        private System.Windows.Forms.TextBox txbSenha;
+        private System.Windows.Forms.TextBox txbEMAIL;
+        private System.Windows.Forms.TextBox txbSENHA;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label labelSenha;
-        private System.Windows.Forms.TextBox txbNome;
+        private System.Windows.Forms.TextBox txbNOME;
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;

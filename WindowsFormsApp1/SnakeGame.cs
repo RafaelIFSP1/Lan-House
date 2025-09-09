@@ -224,5 +224,10 @@ namespace SeuNamespace
                 fontSmall.Dispose();
             }
         }
+
+        private void SnakeGame_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

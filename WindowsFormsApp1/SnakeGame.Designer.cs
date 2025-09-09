@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "SnakeGame";
             this.Text = "SnakeGame";
-          
+            this.Load += new System.EventHandler(this.SnakeGame_Load);
             this.ResumeLayout(false);
 
         }
