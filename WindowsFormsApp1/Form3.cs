@@ -17,6 +17,7 @@ namespace LanHouseSystem
     {
         public Form3()
         {
+            
             InitializeComponent();
         }
 
@@ -44,48 +45,45 @@ namespace LanHouseSystem
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
 
-            string NOME = txbNOME.Text;
-            string EMAIL = txbEMAIL.Text;
-            string SENHA = txbSENHA.Text;
+            string email = txbEMAIL.Text;
+            string senha = txbSENHA.Text;
 
-            string conexao = "Data Source=sqlexpress;Initial Catalog=CJ3027287PR2;User ID=aluno;Password=aluno;";
+            DatabaseHelper db = new DatabaseHelper();
 
-            using (SqlConnection conn = new SqlConnection(conexao))
+            // Primeiro tenta fazer LOGIN
+            if (db.VerificarLogin(email, senha))
             {
-                conn.Open();
+                MessageBox.Show("✅ LOGIN REALIZADO COM SUCESSO!");
+                // Abre a próxima tela do sistema
 
-                // Verifica se o email já existe
-                string verificaSql = "SELECT COUNT(*) FROM Usuarios WHERE EMAIL = @EMAIL";
-                using (SqlCommand verificaCmd = new SqlCommand(verificaSql, conn))
+                Form4 product = new Form4();
+                this.Visible = false;
+                product.ShowDialog();
+                this.Visible = true;
+            }
+            else
+            {
+                // Se login falhar, tenta CADASTRAR
+                DialogResult result = MessageBox.Show(
+                    "Usuário não encontrado. Deseja cadastrar? \n (A senha pode estar incorreta)",
+                    "Novo usuário",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
                 {
-                    verificaCmd.Parameters.AddWithValue("@EMAIL", EMAIL);
-                    int existe = (int)verificaCmd.ExecuteScalar();
-
-                    if (existe > 0)
+                    if (db.CadastrarUsuario(email, senha))
                     {
-                        MessageBox.Show("Este email já está cadastrado.");
-                        return;
+                        MessageBox.Show("✅ CADASTRO REALIZADO COM SUCESSO!\nAgora faça login.");
+                        txbEMAIL.Text = "";
+                        txbSENHA.Text = "";
                     }
                 }
-
-                // Insere novo usuário
-                string sql = "INSERT INTO Usuarios (NOME, EMAIL, SENHA) VALUES (@NOME, @EMAIL, @SENHA)";
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@NOME", NOME);
-                    cmd.Parameters.AddWithValue("@EMAIL", EMAIL);
-                    cmd.Parameters.AddWithValue("@SENHA", SENHA);
-                    cmd.ExecuteNonQuery();
-                }
-
-                MessageBox.Show("Cadastro realizado com sucesso!");
-                txbNOME.Clear();
-                txbEMAIL.Clear();
-                txbSENHA.Clear();
             }
         }
-
         private void textBox8_TextChanged(object sender, EventArgs e)
         {
 

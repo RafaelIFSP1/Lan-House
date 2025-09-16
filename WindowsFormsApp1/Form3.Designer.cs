@@ -34,8 +34,6 @@
             this.txbSENHA = new System.Windows.Forms.TextBox();
             this.labelEmail = new System.Windows.Forms.Label();
             this.labelSenha = new System.Windows.Forms.Label();
-            this.txbNOME = new System.Windows.Forms.TextBox();
-            this.labelNome = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,7 +69,7 @@
             this.txbEMAIL.Name = "txbEMAIL";
             this.txbEMAIL.Size = new System.Drawing.Size(100, 20);
             this.txbEMAIL.TabIndex = 2;
-            this.txbEMAIL.TextChanged += new System.EventHandler(this.textBoxemail_TextChanged);
+
             // 
             // txbSENHA
             // 
@@ -79,7 +77,7 @@
             this.txbSENHA.Name = "txbSENHA";
             this.txbSENHA.Size = new System.Drawing.Size(100, 20);
             this.txbSENHA.TabIndex = 3;
-            this.txbSENHA.TextChanged += new System.EventHandler(this.textBoxsenha_TextChanged);
+      
             // 
             // labelEmail
             // 
@@ -101,24 +99,6 @@
             this.labelSenha.TabIndex = 5;
             this.labelSenha.Text = "SENHA";
             // 
-            // txbNOME
-            // 
-            this.txbNOME.Location = new System.Drawing.Point(23, 129);
-            this.txbNOME.Name = "txbNOME";
-            this.txbNOME.Size = new System.Drawing.Size(100, 20);
-            this.txbNOME.TabIndex = 6;
-            this.txbNOME.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
-            // 
-            // labelNome
-            // 
-            this.labelNome.AutoSize = true;
-            this.labelNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNome.Location = new System.Drawing.Point(20, 110);
-            this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(51, 16);
-            this.labelNome.TabIndex = 7;
-            this.labelNome.Text = "NOME";
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -129,7 +109,7 @@
             this.button3.TabIndex = 9;
             this.button3.Text = "VOLTAR";
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+       
             // 
             // pictureBox1
             // 
@@ -139,14 +119,12 @@
             this.pictureBox1.Size = new System.Drawing.Size(1486, 1005);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+     
             // 
             // Form3
             // 
             this.ClientSize = new System.Drawing.Size(765, 525);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.labelNome);
-            this.Controls.Add(this.txbNOME);
             this.Controls.Add(this.labelSenha);
             this.Controls.Add(this.labelEmail);
             this.Controls.Add(this.txbSENHA);
@@ -181,8 +159,6 @@
         private System.Windows.Forms.TextBox txbSENHA;
         private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label labelSenha;
-        private System.Windows.Forms.TextBox txbNOME;
-        private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button3;
     }

@@ -16,5 +16,10 @@ namespace LanHouseSystem
         {
             InitializeComponent();
         }
+
+        private void Recordes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
